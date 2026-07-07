@@ -783,6 +783,7 @@ html { scroll-padding-top: 80px; }
     .garage-plan-text h3 { font-size: 20px; }
     .garage-plan-text p { font-size: 13.5px; }
     .garage-plan-img img { height: 200px; }
+    .legend-label { font-size: 12px !important; }
     .info-block { margin: 0 16px 40px; padding: 20px 18px; flex-direction: column; gap: 12px; }
     .info-block-body p { font-size: 14px; }
     .contact-section { padding: 0 16px 40px; }
@@ -816,7 +817,6 @@ page = st.query_params.get("page", "home")
 # ── NAVIGATION ────────────────────────────────────────────────────────────────
 _active_home = "active" if page == "home" else ""
 _active_evac = "active" if page == "evacuation" else ""
-_active_numbers = "active" if page == "numbers" else ""
 # Only force a reload back to the home page when we're not already on it —
 # otherwise these stay plain in-page anchors so scrolling works instantly.
 _home_prefix = "" if page == "home" else "?page=home"
@@ -830,7 +830,6 @@ st.markdown(f"""
     <a href="{_home_prefix}#temperature">Temperature</a>
     <a href="{_home_prefix}#contact">Contact</a>
     <a href="?page=evacuation" target="_self" class="{_active_evac}">Evacuation Plan</a>
-    <a href="?page=numbers" target="_self" class="{_active_numbers}">Important Numbers</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>
@@ -856,32 +855,7 @@ def _render_routed_footer():
 if page == "evacuation":
     evac_pdf_path = ASSETS / "Evacuation plan.pdf"
     evac_pdf_href = f"data:application/pdf;base64,{b64(evac_pdf_path)}"
-    st.markdown(f"""
-    <section class="pa-section" style="padding-bottom:0;">
-      <div class="section-tag">Safety information</div>
-      <div class="section-divider"></div>
-      <div class="section-h2">Evacuation Plan</div>
-    </section>
-    <div class="garage-plan-wrap">
-      <div class="garage-plan-card">
-        <div class="garage-plan-text">
-          <div class="section-tag">Evacuation Plan</div>
-          <h3>Evacuation Plan</h3>
-          <p>The image shows the evacuation routes for the apartment floor. Green markings indicate the escape paths leading to the emergency staircase and exits, while red symbols show fire safety equipment such as extinguishers, alarms, and hydrants. The designated assembly point is marked outside the building.</p>
-          <a class="btn-primary" href="{evac_pdf_href}" download="Evacuation Plan.pdf" style="width:fit-content;">Download Evacuation Plan (PDF) &nbsp;<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-top:-2px;"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg></a>
-        </div>
-        <div class="garage-plan-img">
-          {img_tag_sm(evac_plan, "Evacuation plan", "width:100%;height:auto;object-fit:contain;display:block;padding:16px;background:#f9fbf9;")}
-        </div>
-      </div>
-    </div>
-    """, unsafe_allow_html=True)
 
-    _render_routed_footer()
-    st.stop()
-
-# ── IMPORTANT NUMBERS PAGE ─────────────────────────────────────────────────────
-if page == "numbers":
     _numbers = [
         ("Emergency", "112"),
         ("Police", "113"),
@@ -907,11 +881,25 @@ if page == "numbers":
     <section class="pa-section" style="padding-bottom:0;">
       <div class="section-tag">Safety information</div>
       <div class="section-divider"></div>
-      <div class="section-h2">Important Numbers</div>
+      <div class="section-h2">Evacuation Plan</div>
     </section>
+    <div class="garage-plan-wrap">
+      <div class="garage-plan-card">
+        <div class="garage-plan-text">
+          <div class="section-tag">Evacuation Plan</div>
+          <h3>Evacuation Plan</h3>
+          <p>The image shows the evacuation routes for the apartment floor. Green markings indicate the escape paths leading to the emergency staircase and exits, while red symbols show fire safety equipment such as extinguishers, alarms, and hydrants. The designated assembly point is marked outside the building.</p>
+          <a class="btn-primary" href="{evac_pdf_href}" download="Evacuation Plan.pdf" style="width:fit-content;">Download Evacuation Plan (PDF) &nbsp;<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-top:-2px;"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg></a>
+        </div>
+        <div class="garage-plan-img">
+          {img_tag_sm(evac_plan, "Evacuation plan", "width:100%;height:auto;object-fit:contain;display:block;padding:16px;background:#f9fbf9;")}
+        </div>
+      </div>
+    </div>
     <div class="garage-plan-wrap">
       <div class="garage-plan-card" style="grid-template-columns:1fr;">
         <div class="garage-plan-text" style="padding:44px 52px;">
+          <div class="section-tag">Important Numbers</div>
           {"".join(_number_row(label, value, i == len(_numbers) - 1) for i, (label, value) in enumerate(_numbers))}
         </div>
       </div>
@@ -1212,7 +1200,7 @@ st.markdown(f"""
   </div>
 </div>
 <div class="garage-plan-wrap">
-  <div class="garage-plan-card" style="grid-template-columns:1fr 1fr;">
+  <div class="garage-plan-card">
     <div class="garage-plan-img">
       {img_tag_sm(air_recup_img, "Air recuperation system", "width:100%;height:220px;object-fit:contain;display:block;padding:16px;background:#f9fbf9;", max_w=1200, quality=95)}
     </div>
@@ -1227,7 +1215,7 @@ st.markdown(f"""
         {"".join(
           f'<div style="display:flex;align-items:flex-start;gap:10px;">'
           f'<span style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">{n}</span>'
-          f'<span style="font-family:Inter,sans-serif;font-size:13.5px;color:var(--muted);line-height:1.45;">{label}</span>'
+          f'<span class="legend-label" style="font-family:Inter,sans-serif;font-size:13.5px;color:var(--muted);line-height:1.45;">{label}</span>'
           f'</div>'
           for n, label in [
             (1, "Fan speed indicator"),

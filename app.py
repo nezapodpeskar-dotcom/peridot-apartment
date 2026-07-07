@@ -11,6 +11,22 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+st.markdown("""
+<style>
+#MainMenu, header, footer { visibility: hidden !important; display: none !important; }
+[data-testid="stFooter"] { display: none !important; }
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+[data-testid="stStatusWidget"] { display: none !important; }
+.viewerBadge_container__r5tak { display: none !important; }
+.viewerBadge_link__qRIco { display: none !important; }
+.stDeployButton { display: none !important; }
+div[class*="viewerBadge"] { display: none !important; }
+div[class*="streamlit-footer"] { display: none !important; }
+section[data-testid="stSidebar"] { display: none !important; }
+</style>
+""", unsafe_allow_html=True)
+
 ASSETS = Path(__file__).parent / "assets"
 ROOT = Path(__file__).parent
 

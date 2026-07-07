@@ -639,7 +639,8 @@ html { scroll-padding-top: 80px; }
 }
 .cl-item svg { color: var(--green); flex-shrink: 0; margin-top: 2px; }
 .direct-note {
-    background: transparent;
+    background: #fff;
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px 28px;
     font-family: 'Inter', sans-serif;
@@ -1178,7 +1179,7 @@ st.markdown(f"""
       <p>The air recuperation system continuously circulates fresh air throughout the apartment and helps maintain a fresh and comfortable indoor climate during summer days. For the best cooling effect, we recommend using the economy/automatic mode and keeping the fan speed on level 1.</p>
     </div>
     <div style="grid-column:1 / -1;border-top:1px solid var(--border);padding:28px 52px 36px;">
-      <div class="section-tag" style="margin-bottom:14px;">Legend — Air Recuperation System Control Panel</div>
+      <div class="section-tag" style="margin-bottom:14px;">Air Recuperation System Control Panel</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;">
         {"".join(
           f'<div style="display:flex;align-items:flex-start;gap:10px;">'

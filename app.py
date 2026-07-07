@@ -76,6 +76,8 @@ id_photo   = ASSETS / "ID.png"
 enjoy      = ASSETS / "Enjoy.png"
 wishing_you= ASSETS / "Thank you.png"
 evac_plan  = ASSETS / "Evacuation .png"
+blinds_img = ASSETS / "blinds.png"
+air_recup_img = ASSETS / "Air Recuperation.png"
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 st.markdown("""
@@ -812,6 +814,7 @@ page = st.query_params.get("page", "home")
 
 # ── NAVIGATION ────────────────────────────────────────────────────────────────
 _active_home = "active" if page == "home" else ""
+_active_temp = "active" if page == "temperature" else ""
 _active_evac = "active" if page == "evacuation" else ""
 # Only force a reload back to the home page when we're not already on it —
 # otherwise these stay plain in-page anchors so scrolling works instantly.
@@ -824,11 +827,66 @@ st.markdown(f"""
     <a href="{_home_prefix}#checkin">Check-in</a>
     <a href="{_home_prefix}#checkout">Check-out</a>
     <a href="{_home_prefix}#contact">Contact</a>
+    <a href="?page=temperature" target="_self" class="{_active_temp}">Temperature</a>
     <a href="?page=evacuation" target="_self" class="{_active_evac}">Evacuation Plan</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>
 """, unsafe_allow_html=True)
+
+# ── SHARED FOOTER (routed pages) ──────────────────────────────────────────────
+def _render_routed_footer():
+    st.markdown(
+    f'<div class="pa-footer">'
+    f'<div class="footer-left">'
+    f'<p><strong>Need anything during your stay?</strong></p>'
+    f'<p>Contact Saša anytime — we\'re always happy to help.</p>'
+    f'<p><a href="tel:+38631676315">+386 31 676 315</a> &nbsp;·&nbsp; <a href="mailto:sasa.podpeskar@gmail.com">sasa.podpeskar@gmail.com</a></p>'
+    f'</div>'
+    f'<div class="footer-logo">'
+    f'{img_tag(logo, "Peridot Apartment", "height:52px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88;")}'
+    f'</div>'
+    f'<div class="footer-copy">© Peridot Apartment · Villa Mojca · Borovška cesta 99b, 4280 Kranjska Gora</div>'
+    f'</div>',
+    unsafe_allow_html=True)
+
+# ── TEMPERATURE PAGE ───────────────────────────────────────────────────────────
+if page == "temperature":
+    st.markdown(f"""
+    <section class="pa-section" style="padding-bottom:0;">
+      <div class="section-tag">Comfort tips</div>
+      <div class="section-divider"></div>
+      <div class="section-h2">Apartment Temperature Regulation</div>
+      <p class="section-sub">During summer days, you can help keep the apartment cool and comfortable by using the blinds and the air recuperation system together.</p>
+    </section>
+    <div class="garage-plan-wrap" style="padding-bottom:32px;">
+      <div class="garage-plan-card">
+        <div class="garage-plan-text">
+          <div class="section-tag">Blinds</div>
+          <h3>Blinds</h3>
+          <p>The apartment blinds can be lowered during the day to reduce direct sunlight and prevent the apartment from overheating. Keeping the blinds closed, especially on sunny windows, will help maintain a cooler indoor temperature.</p>
+        </div>
+        <div class="garage-plan-img">
+          {img_tag_sm(blinds_img, "Blinds", "width:100%;height:320px;object-fit:cover;display:block;")}
+        </div>
+      </div>
+    </div>
+    <div class="garage-plan-wrap">
+      <div class="garage-plan-card">
+        <div class="garage-plan-img">
+          {img_tag_sm(air_recup_img, "Air recuperation system", "width:100%;height:320px;object-fit:cover;display:block;")}
+        </div>
+        <div class="garage-plan-text">
+          <div class="section-tag">Air Recuperation System</div>
+          <h3>Air Recuperation System</h3>
+          <p>The air recuperation system continuously circulates fresh air throughout the apartment and helps maintain a fresh and comfortable indoor climate during summer days. For the best cooling effect, we recommend using the economy/automatic mode and keeping the fan speed on level 1.</p>
+        </div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    _render_routed_footer()
+    st.stop()
 
 # ── EVACUATION PLAN PAGE ──────────────────────────────────────────────────────
 if page == "evacuation":
@@ -855,20 +913,7 @@ if page == "evacuation":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(
-    f'<div class="pa-footer">'
-    f'<div class="footer-left">'
-    f'<p><strong>Need anything during your stay?</strong></p>'
-    f'<p>Contact Saša anytime — we\'re always happy to help.</p>'
-    f'<p><a href="tel:+38631676315">+386 31 676 315</a> &nbsp;·&nbsp; <a href="mailto:sasa.podpeskar@gmail.com">sasa.podpeskar@gmail.com</a></p>'
-    f'</div>'
-    f'<div class="footer-logo">'
-    f'{img_tag(logo, "Peridot Apartment", "height:52px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88;")}'
-    f'</div>'
-    f'<div class="footer-copy">© Peridot Apartment · Villa Mojca · Borovška cesta 99b, 4280 Kranjska Gora</div>'
-    f'</div>',
-    unsafe_allow_html=True)
-
+    _render_routed_footer()
     st.stop()
 
 # ── HERO ──────────────────────────────────────────────────────────────────────

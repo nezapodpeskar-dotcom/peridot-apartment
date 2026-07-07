@@ -824,7 +824,7 @@ st.markdown(f"""
     <a href="{_home_prefix}#checkin">Check-in</a>
     <a href="{_home_prefix}#checkout">Check-out</a>
     <a href="{_home_prefix}#contact">Contact</a>
-    <a href="?page=evacuation" target="_blank" class="{_active_evac}">Evacuation Plan</a>
+    <a href="?page=evacuation" target="_self" class="{_active_evac}">Evacuation Plan</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>

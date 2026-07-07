@@ -201,7 +201,7 @@ html { scroll-padding-top: 80px; }
 .btn-outline:hover { background: var(--light); color: var(--dark) !important; }
 .hero-addr {
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     color: var(--muted);
     display: flex;
     align-items: center;
@@ -1103,7 +1103,7 @@ f'<div class="section-divider"></div>'
 f'<div class="section-h2">Check-out</div>'
 f'<div class="checkout-grid">'
 f'<div class="checkout-left">'
-f'<p class="checkout-intro">"We hope you had a wonderful time in Kranjska Gora."</p>'
+f'<p class="checkout-intro">We hope you had a wonderful time in Kranjska Gora.</p>'
 f'<div class="checklist">'
 f'<div class="cl-item">{_chk_icon}<span><strong>Check-out is by 10:00 a.m.</strong></span></div>'
 f'<div class="cl-item">{_chk_icon}<span>Return the keys to the key safe, <strong>lock it and close the lid</strong>. Leave the garage remote with the keys.</span></div>'

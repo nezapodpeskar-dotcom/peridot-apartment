@@ -612,8 +612,7 @@ html { scroll-padding-top: 80px; }
 }
 .cl-item svg { color: var(--green); flex-shrink: 0; margin-top: 2px; }
 .direct-note {
-    background: #fff;
-    border: 1px solid var(--border);
+    background: transparent;
     border-radius: 12px;
     padding: 24px 28px;
     font-family: 'Inter', sans-serif;

@@ -68,6 +68,10 @@ st.markdown("""
 /* ── Streamlit resets ── */
 #MainMenu, footer, header { visibility: hidden; }
 .stApp > header { display: none; }
+[data-testid="stFooter"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+.viewerBadge_container__r5tak { display: none !important; }
+.stDeployButton { display: none !important; }
 .block-container {
     padding: 0 !important;
     max-width: 100% !important;

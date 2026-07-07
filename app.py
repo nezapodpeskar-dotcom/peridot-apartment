@@ -938,7 +938,7 @@ _tl = (
     '<div class="tl-body">'
       '<div class="tl-step">Step 5</div>'
       '<div class="tl-title">Parking, Storage &amp; Bicycle Room</div>'
-      '<div class="tl-desc">Your dedicated parking space is number <span style="color:#148A46;font-weight:700;">5</span> on the left. In case you need additional storage or bicycle space, room number <span style="color:#148A46;font-weight:700;">5</span> is located in the garage area.</div>'
+      '<div class="tl-desc">Your dedicated parking space is number <span style="color:#148A46;font-weight:700;">5</span> (fourth on the left side). In case you need additional storage or bicycle space, room number <span style="color:#148A46;font-weight:700;">5</span> is located in the garage area.</div>'
     '</div>'
   '</div>'
   '<div class="tl-item">'

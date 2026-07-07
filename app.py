@@ -201,7 +201,7 @@ html { scroll-padding-top: 80px; }
 .btn-outline:hover { background: var(--light); color: var(--green); }
 .hero-addr {
     font-family: 'Inter', sans-serif;
-    font-size: 13.5px;
+    font-size: 15px;
     color: var(--muted);
     display: flex;
     align-items: center;
@@ -212,7 +212,7 @@ html { scroll-padding-top: 80px; }
 .hero-addr a {
     color: var(--green);
     font-weight: 600;
-    font-size: 12.5px;
+    font-size: 14.5px;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -819,7 +819,7 @@ st.markdown(f"""
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
       </svg>
       Borovška cesta 99b, 4280 Kranjska Gora &nbsp;·&nbsp;
-      <a href="https://www.google.com/maps/place/VILA+MOJCA+Kranjska+Gora+-+Peridot+apartment,+Sa%C5%A1a+Podpeskar+s.p./@46.4840309,13.7788626,17z/data=!3m1!4b1!4m6!3m5!1s0x477a7d96a036c899:0xc03b6f12d98b7421!8m2!3d46.4840272!4d13.7814429!16s%2Fg%2F11rgbrfk6w" target="_blank">Open in Google Maps ↗</a>
+      <a href="https://www.google.com/maps/place/VILA+MOJCA+Kranjska+Gora+-+Peridot+apartment,+Sa%C5%A1a+Podpeskar+s.p./@46.4840309,13.7788626,17z/data=!3m1!4b1!4m6!3m5!1s0x477a7d96a036c899:0xc03b6f12d98b7421!8m2!3d46.4840272!4d13.7814429!16s%2Fg%2F11rgbrfk6w" target="_blank">Open in Google Maps</a>
     </div>
   </div>
   <div class="pa-hero-right">

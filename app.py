@@ -63,7 +63,7 @@ def img_tag_sm(path: Path, alt: str = "", style: str = "") -> str:
 
 # ── Load assets ──────────────────────────────────────────────────────────────
 logo       = ASSETS / "cropped-F5A33662-9B21-4B86-BD7E-F1D7F4CC3726.png"
-building   = ASSETS / "Vila mojca.png"
+building   = ASSETS / "Vila Mojca 2.png"
 key_safe   = ASSETS / "key safe.png"
 garage_img = ASSETS / "garage.jpeg"
 terrace    = ASSETS / "Terasa.jpg"

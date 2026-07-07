@@ -979,7 +979,7 @@ _photos = (
   f'</div>'
   f'<div class="photo-card">'
     f'{img_tag_sm(bicycle, "Bicycle &amp; storage", "width:100%;height:190px;object-fit:cover;display:block;")}'
-    f'<div class="photo-cap">Storage &amp; bicycle room</div>'
+    f'<div class="photo-cap">Bicycle room</div>'
   f'</div>'
   f'<div style="grid-column:1/-1;display:flex;justify-content:center;margin-top:72px;">'
     f'{img_tag_sm(enjoy, "Enjoy your stay", "width:55%;height:130px;object-fit:cover;display:block;border-radius:14px;")}'

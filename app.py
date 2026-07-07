@@ -811,7 +811,7 @@ st.markdown(f"""
 <nav class="pa-nav">
   <a href="#welcome">{img_tag(logo, "Peridot Apartment", "height:46px;object-fit:contain;")}</a>
   <div class="pa-nav-links">
-    <a href="#welcome" class="active">Welcome</a>
+    <a href="#welcome" class="active">Peridot Apartment</a>
     <a href="#checkin">Check-in</a>
     <a href="#checkout">Check-out</a>
     <a href="#contact">Contact</a>

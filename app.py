@@ -781,7 +781,7 @@ html { scroll-padding-top: 80px; }
     .garage-plan-wrap { padding: 0 16px 40px; }
     .garage-plan-text { padding: 24px 18px; }
     .garage-plan-text h3 { font-size: 20px; }
-    .garage-plan-text p { font-size: 13.5px; }
+    .garage-plan-text p { font-size: 13.5px; text-align: justify; }
     .garage-plan-img img { height: 200px; }
     .legend-label { font-size: 12px !important; }
     .info-block { margin: 0 16px 40px; padding: 20px 18px; flex-direction: column; gap: 12px; }

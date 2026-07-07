@@ -1,0 +1,255 @@
+- generic [ref=f13e6]:
+  - navigation [ref=f13e11]:
+    - link "Peridot Apartment" [ref=f13e12] [cursor=pointer]:
+      - /url: "#welcome"
+      - img "Peridot Apartment" [ref=f13e13]
+    - generic [ref=f13e14]:
+      - link "Welcome" [ref=f13e15] [cursor=pointer]:
+        - /url: "#welcome"
+      - link "Check-in" [ref=f13e16] [cursor=pointer]:
+        - /url: "#checkin"
+      - link "Check-out" [ref=f13e17] [cursor=pointer]:
+        - /url: "#checkout"
+      - link "Contact" [ref=f13e18] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=f13e24]:
+    - generic [ref=f13e25]:
+      - generic [ref=f13e26]: Dear Guest,
+      - generic [ref=f13e27]:
+        - text: welcome to
+        - text: Peridot Apartment
+      - paragraph [ref=f13e28]: Thank you for choosing our apartment in beautiful Kranjska Gora. We wish you a pleasant stay and unforgettable moments in the mountains.
+      - generic [ref=f13e29]:
+        - link "Check-in Instructions" [ref=f13e30] [cursor=pointer]:
+          - /url: "#checkin"
+        - link "Check-out Info" [ref=f13e31] [cursor=pointer]:
+          - /url: "#checkout"
+      - generic [ref=f13e32]:
+        - img [ref=f13e33]
+        - text: Borovška cesta 99b, 4280 Kranjska Gora ·
+        - link "Open in Google Maps ↗" [ref=f13e36] [cursor=pointer]:
+          - /url: https://www.google.com/maps/place/VILA+MOJCA+Kranjska+Gora+-+Peridot+apartment,+Sa%C5%A1a+Podpeskar+s.p./@46.4840309,13.7788626,17z/data=!3m1!4b1!4m6!3m5!1s0x477a7d96a036c899:0xc03b6f12d98b7421!8m2!3d46.4840272!4d13.7814429!16s%2Fg%2F11rgbrfk6w
+    - img "Villa Mojca" [ref=f13e38]
+  - generic [ref=f13e43]:
+    - generic [ref=f13e44]:
+      - img [ref=f13e46]
+      - generic [ref=f13e49]: Self Check-in
+      - generic [ref=f13e50]:
+        - text: Arrive any time after 15:00.
+        - text: Key safe access code sent in advance.
+    - generic [ref=f13e51]:
+      - img [ref=f13e53]
+      - generic [ref=f13e55]: Safe & Secure
+      - generic [ref=f13e56]:
+        - text: Private garage with remote access.
+        - text: Secure building entrance.
+    - generic [ref=f13e57]:
+      - img [ref=f13e59]
+      - generic [ref=f13e64]: Parking & Garage
+      - generic [ref=f13e65]:
+        - text: "Dedicated space #5 in covered garage."
+        - text: Bicycle & storage room included.
+    - generic [ref=f13e66]:
+      - img [ref=f13e68]
+      - generic [ref=f13e70]: We Are Here
+      - generic [ref=f13e71]:
+        - text: Need anything? We are always
+        - text: just a message away.
+  - generic [ref=f13e76]:
+    - generic [ref=f13e77]:
+      - generic [ref=f13e78]:
+        - generic [ref=f13e79]: Your arrival guide
+        - generic [ref=f13e81]: Check-in Instructions
+        - paragraph [ref=f13e82]: Everything you need to know for a smooth, hassle-free arrival at Peridot Apartment.
+      - generic [ref=f13e83]:
+        - generic [ref=f13e84]:
+          - img [ref=f13e85]
+          - text: Important — Before Arrival
+        - heading "Guest Registration Required" [level=4] [ref=f13e88]:
+          - text: Guest Registration Required
+          - generic [ref=f13e89]:
+            - link "Link to heading":
+              - /url: "#guest-registration-required"
+              - img
+        - paragraph [ref=f13e90]:
+          - text: Please send copies or photos of
+          - strong [ref=f13e91]: ID cards or passports for all guests
+          - text: via WhatsApp, Viber, SMS, or e-mail before your arrival. This is required by Slovenian tourism law.
+    - generic [ref=f13e92]:
+      - generic [ref=f13e93]:
+        - generic [ref=f13e94]:
+          - generic [ref=f13e96]: "1"
+          - generic [ref=f13e98]:
+            - generic [ref=f13e99]: Step 1
+            - generic [ref=f13e100]: Arrive
+            - generic [ref=f13e101]:
+              - text: Head to
+              - strong [ref=f13e102]: Villa Mojca
+              - text: ", Borovška cesta 99b, Kranjska Gora."
+        - generic [ref=f13e103]:
+          - generic [ref=f13e105]: "2"
+          - generic [ref=f13e107]:
+            - generic [ref=f13e108]: Step 2
+            - generic [ref=f13e109]: Find the Key Safe
+            - generic [ref=f13e110]:
+              - text: The key safe is on the
+              - strong [ref=f13e111]: wall by the garage door, on the left side
+              - text: . Your access code will be sent via WhatsApp/SMS before arrival.
+        - generic [ref=f13e112]:
+          - generic [ref=f13e114]: "3"
+          - generic [ref=f13e116]:
+            - generic [ref=f13e117]: Step 3
+            - generic [ref=f13e118]: Open the Safe
+            - generic [ref=f13e119]:
+              - text: Enter your code, open the safe and take the
+              - strong [ref=f13e120]: apartment keys
+              - text: and
+              - strong [ref=f13e121]: garage remote
+              - text: .
+        - generic [ref=f13e122]:
+          - generic [ref=f13e124]: "4"
+          - generic [ref=f13e126]:
+            - generic [ref=f13e127]: Step 4
+            - generic [ref=f13e128]: Garage Access
+            - generic [ref=f13e129]: Use the remote to open the ramp first, then the garage door.
+        - generic [ref=f13e130]:
+          - generic [ref=f13e132]: "5"
+          - generic [ref=f13e134]:
+            - generic [ref=f13e135]: Step 5
+            - generic [ref=f13e136]: Parking, Storage & Bicycle Room
+            - generic [ref=f13e137]: Your dedicated parking space is number 5 on the left. Storage and bicycle room number 5 is located in the garage.
+        - generic [ref=f13e138]:
+          - generic [ref=f13e140]: "6"
+          - generic [ref=f13e142]:
+            - generic [ref=f13e143]: Step 6
+            - generic [ref=f13e144]: Apartment Location
+            - generic [ref=f13e145]:
+              - text: From the garage, take the
+              - strong [ref=f13e146]: stairs to the first floor
+              - text: . From the main entrance, it is the
+              - strong [ref=f13e147]: first apartment on the right
+              - text: .
+        - generic [ref=f13e148]:
+          - generic [ref=f13e150]: "7"
+          - generic [ref=f13e151]:
+            - generic [ref=f13e152]: Step 7
+            - generic [ref=f13e153]: Apartment Terrace
+            - generic [ref=f13e154]:
+              - text: Enjoy
+              - strong [ref=f13e155]: mountain views
+              - text: from our terrace with a welcome drink prepared only for you.
+      - generic [ref=f13e156]:
+        - generic [ref=f13e157]:
+          - img "Key safe" [ref=f13e158]
+          - generic [ref=f13e159]: Key safe
+        - generic [ref=f13e160]:
+          - img "Garage" [ref=f13e161]
+          - generic [ref=f13e162]: Garage interior
+        - generic [ref=f13e163]:
+          - img "Terrace" [ref=f13e164]
+          - generic [ref=f13e165]: Apartment terrace
+        - generic [ref=f13e166]:
+          - img "Bicycle & storage" [ref=f13e167]
+          - generic [ref=f13e168]: Storage & bicycle room
+  - generic [ref=f13e174]:
+    - generic [ref=f13e175]:
+      - generic [ref=f13e176]: Key box location
+      - heading "Where to Find the Key Safe" [level=3] [ref=f13e178]:
+        - text: Where to Find the Key Safe
+        - generic [ref=f13e179]:
+          - link "Link to heading":
+            - /url: "#where-to-find-the-key-safe"
+            - img
+      - generic [ref=f13e180]:
+        - img [ref=f13e181]
+        - text: Beside the garage entrance — on the left
+      - paragraph [ref=f13e183]: The apartment keys and garage remote are stored in the key safe beside the garage entrance. Use the code provided before arrival to access the safe and enter the garage area.
+    - img "Key box location" [ref=f13e185]
+  - generic [ref=f13e191]:
+    - generic [ref=f13e192]:
+      - generic [ref=f13e193]: Garage layout
+      - heading "Your Parking Space & Storage" [level=3] [ref=f13e195]:
+        - text: Your Parking Space & Storage
+        - generic [ref=f13e196]:
+          - link "Link to heading":
+            - /url: "#your-parking-space-and-storage"
+            - img
+      - generic [ref=f13e197]:
+        - img [ref=f13e198]
+        - text: Parking space number 5 — on the left
+      - paragraph [ref=f13e200]: Use the remote control to open the ramp, then the garage door. Storage and bicycle room are also assigned number 5, adjacent to your parking space.
+    - img "Garage floor plan" [ref=f13e202]
+  - generic [ref=f13e208]:
+    - generic [ref=f13e209]:
+      - heading "Contact Saša" [level=3] [ref=f13e211]:
+        - text: Contact Saša
+        - generic [ref=f13e212]:
+          - link "Link to heading":
+            - /url: "#contact-sasa"
+            - img
+      - generic [ref=f13e213]:
+        - img [ref=f13e214]
+        - generic [ref=f13e216]:
+          - text: "WhatsApp / Viber / GSM:"
+          - link "+386 31 676 315" [ref=f13e217] [cursor=pointer]:
+            - /url: tel:+38631676315
+      - generic [ref=f13e218]:
+        - img [ref=f13e219]
+        - generic [ref=f13e222]:
+          - text: "E-mail:"
+          - link "sasa.podpeskar@gmail.com" [ref=f13e223] [cursor=pointer]:
+            - /url: mailto:sasa.podpeskar@gmail.com
+      - generic [ref=f13e224]:
+        - img [ref=f13e225]
+        - generic [ref=f13e228]:
+          - text: "Website:"
+          - link "www.vila-mojca.com" [ref=f13e229] [cursor=pointer]:
+            - /url: https://www.vila-mojca.com
+    - img "Saša & Rok" [ref=f13e231]
+  - generic [ref=f13e236]:
+    - generic [ref=f13e237]: End of your stay
+    - generic [ref=f13e239]: Check-out
+    - generic [ref=f13e240]:
+      - generic [ref=f13e241]:
+        - paragraph [ref=f13e242]: "\"Your holiday is coming to an end. We hope you had a wonderful time in Peridot Apartment, Kranjska Gora.\""
+        - generic [ref=f13e243]:
+          - generic [ref=f13e244]:
+            - img [ref=f13e245]
+            - strong [ref=f13e249]: Check-out is by 10:00 a.m.
+          - generic [ref=f13e250]:
+            - img [ref=f13e251]
+            - generic [ref=f13e254]:
+              - text: Return the keys to the key safe,
+              - strong [ref=f13e255]: lock it and close the lid
+              - text: . Leave the garage remote with the keys.
+          - generic [ref=f13e256]:
+            - img [ref=f13e257]
+            - generic [ref=f13e260]:
+              - text: Make sure
+              - strong [ref=f13e261]: all windows and doors are closed
+              - text: before leaving.
+          - generic [ref=f13e262]:
+            - img [ref=f13e263]
+            - generic [ref=f13e266]:
+              - text: Please
+              - strong [ref=f13e267]: take out all trash
+              - text: before leaving.
+        - generic [ref=f13e268]:
+          - strong [ref=f13e269]: Thank you for staying with us.
+          - text: For your next stay, feel free to contact us directly for possible special offers and returning guest benefits.
+        - link "Book Directly Next Time ↗" [ref=f13e270] [cursor=pointer]:
+          - /url: https://www.vila-mojca.com
+      - img "Key return" [ref=f13e272]
+  - generic [ref=f13e277]:
+    - generic [ref=f13e278]:
+      - paragraph [ref=f13e279]:
+        - strong [ref=f13e280]: Need anything during your stay?
+      - paragraph [ref=f13e281]: Contact Saša anytime — we're always happy to help.
+      - paragraph [ref=f13e282]:
+        - link "+386 31 676 315" [ref=f13e283] [cursor=pointer]:
+          - /url: tel:+38631676315
+        - text: ·
+        - link "sasa.podpeskar@gmail.com" [ref=f13e284] [cursor=pointer]:
+          - /url: mailto:sasa.podpeskar@gmail.com
+    - img "Peridot Apartment" [ref=f13e286]
+    - generic [ref=f13e287]: © Peridot Apartment · Villa Mojca · Borovška cesta 99b, 4280 Kranjska Gora

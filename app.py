@@ -872,7 +872,7 @@ if page == "temperature":
       </div>
     </div>
     <div class="garage-plan-wrap">
-      <div class="garage-plan-card">
+      <div class="garage-plan-card" style="grid-template-columns:1fr 1fr;">
         <div class="garage-plan-img">
           {img_tag_sm(air_recup_img, "Air recuperation system", "width:100%;height:220px;object-fit:contain;display:block;padding:16px;background:#f9fbf9;", max_w=1200, quality=95)}
         </div>
@@ -880,6 +880,27 @@ if page == "temperature":
           <div class="section-tag">Air Recuperation System</div>
           <h3>Air Recuperation System</h3>
           <p>The air recuperation system continuously circulates fresh air throughout the apartment and helps maintain a fresh and comfortable indoor climate during summer days. For the best cooling effect, we recommend using the economy/automatic mode and keeping the fan speed on level 1.</p>
+        </div>
+        <div style="grid-column:1 / -1;border-top:1px solid var(--border);padding:28px 52px 36px;">
+          <div class="section-tag" style="margin-bottom:14px;">Legend — Air Recuperation System Control Panel</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;">
+            {"".join(
+              f'<div style="display:flex;align-items:flex-start;gap:10px;">'
+              f'<span style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">{n}</span>'
+              f'<span style="font-family:Inter,sans-serif;font-size:13.5px;color:var(--muted);line-height:1.45;">{label}</span>'
+              f'</div>'
+              for n, label in [
+                (1, "Fan speed indicator"),
+                (2, "Increase fan speed"),
+                (3, "Automatic mode (AUTO)"),
+                (4, "Decrease fan speed / power off"),
+                (5, "Economy mode"),
+                (6, "Standard ventilation mode"),
+                (7, "Sleep / quiet mode"),
+                (8, "Filter indicator (left and right)"),
+              ]
+            )}
+          </div>
         </div>
       </div>
     </div>

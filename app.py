@@ -187,7 +187,7 @@ html { scroll-padding-top: 80px; }
     display: inline-block;
     background: transparent;
     color: var(--dark) !important;
-    border: 2px solid var(--dark);
+    border: 2px solid var(--green);
     padding: 12px 30px;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;

@@ -821,7 +821,7 @@ st.markdown(f"""
     </div>
   </div>
   <div class="pa-hero-right">
-    {img_tag_sm(building, "Villa Mojca", "width:100%;height:580px;object-fit:cover;display:block;")}
+    {img_tag_sm(building, "Villa Mojca", "width:100%;object-fit:cover;display:block;")}
     <div class="hero-img-overlay"></div>
   </div>
 </section>

@@ -816,6 +816,7 @@ page = st.query_params.get("page", "home")
 # ── NAVIGATION ────────────────────────────────────────────────────────────────
 _active_home = "active" if page == "home" else ""
 _active_evac = "active" if page == "evacuation" else ""
+_active_numbers = "active" if page == "numbers" else ""
 # Only force a reload back to the home page when we're not already on it —
 # otherwise these stay plain in-page anchors so scrolling works instantly.
 _home_prefix = "" if page == "home" else "?page=home"
@@ -829,6 +830,7 @@ st.markdown(f"""
     <a href="{_home_prefix}#temperature">Temperature</a>
     <a href="{_home_prefix}#contact">Contact</a>
     <a href="?page=evacuation" target="_self" class="{_active_evac}">Evacuation Plan</a>
+    <a href="?page=numbers" target="_self" class="{_active_numbers}">Important Numbers</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>
@@ -870,6 +872,47 @@ if page == "evacuation":
         </div>
         <div class="garage-plan-img">
           {img_tag_sm(evac_plan, "Evacuation plan", "width:100%;height:auto;object-fit:contain;display:block;padding:16px;background:#f9fbf9;")}
+        </div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    _render_routed_footer()
+    st.stop()
+
+# ── IMPORTANT NUMBERS PAGE ─────────────────────────────────────────────────────
+if page == "numbers":
+    _numbers = [
+        ("Emergency", "112"),
+        ("Police", "113"),
+        ("Road emergency", "1987"),
+        ("Owners", "+386 31 676 315 or +386 40 414 141"),
+    ]
+
+    def _number_row(label, value, is_last=False):
+        tel_links = " or ".join(
+            f'<a href="tel:{n.replace(" ", "")}" style="color:var(--green);text-decoration:none;">{n}</a>'
+            for n in value.split(" or ")
+        )
+        border = "" if is_last else "border-bottom:1px solid var(--border);"
+        return (
+            f'<div style="display:flex;align-items:center;justify-content:space-between;'
+            f'padding:18px 0;{border}">'
+            f'<span style="font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:var(--dark);">{label}</span>'
+            f'<span style="font-family:Inter,sans-serif;font-size:15px;font-weight:700;color:var(--green);">{tel_links}</span>'
+            f'</div>'
+        )
+
+    st.markdown(f"""
+    <section class="pa-section" style="padding-bottom:0;">
+      <div class="section-tag">Safety information</div>
+      <div class="section-divider"></div>
+      <div class="section-h2">Important Numbers</div>
+    </section>
+    <div class="garage-plan-wrap">
+      <div class="garage-plan-card" style="grid-template-columns:1fr;">
+        <div class="garage-plan-text" style="padding:44px 52px;">
+          {"".join(_number_row(label, value, i == len(_numbers) - 1) for i, (label, value) in enumerate(_numbers))}
         </div>
       </div>
     </div>

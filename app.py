@@ -813,15 +813,18 @@ page = st.query_params.get("page", "home")
 # ── NAVIGATION ────────────────────────────────────────────────────────────────
 _active_home = "active" if page == "home" else ""
 _active_evac = "active" if page == "evacuation" else ""
+# Only force a reload back to the home page when we're not already on it —
+# otherwise these stay plain in-page anchors so scrolling works instantly.
+_home_prefix = "" if page == "home" else "?page=home"
 st.markdown(f"""
 <nav class="pa-nav">
-  <a href="?page=home#welcome">{img_tag(logo, "Peridot Apartment", "height:46px;object-fit:contain;")}</a>
+  <a href="{_home_prefix}#welcome">{img_tag(logo, "Peridot Apartment", "height:46px;object-fit:contain;")}</a>
   <div class="pa-nav-links">
-    <a href="?page=home#welcome" class="{_active_home}">Welcome</a>
-    <a href="?page=home#checkin">Check-in</a>
-    <a href="?page=home#checkout">Check-out</a>
-    <a href="?page=home#contact">Contact</a>
-    <a href="?page=evacuation" class="{_active_evac}">Evacuation Plan</a>
+    <a href="{_home_prefix}#welcome" class="{_active_home}">Welcome</a>
+    <a href="{_home_prefix}#checkin">Check-in</a>
+    <a href="{_home_prefix}#checkout">Check-out</a>
+    <a href="{_home_prefix}#contact">Contact</a>
+    <a href="?page=evacuation" target="_blank" class="{_active_evac}">Evacuation Plan</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>

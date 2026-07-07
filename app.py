@@ -1111,7 +1111,7 @@ f'<div class="cl-item">{_chk_icon}<span>Make sure <strong>all windows and doors 
 f'<div class="cl-item">{_chk_icon}<span>Please <strong>take out all trash</strong> before leaving.</span></div>'
 f'</div>'
 f'<div class="direct-note"><strong>Thank you for staying with us.</strong> For your next stay, feel free to contact us directly for possible special offers and returning guest benefits.</div>'
-f'<a class="btn-primary" href="https://vila-mojca.com/en/dobrodosli-english/" target="_blank">Book Directly Next Time ↗</a>'
+f'<a class="btn-primary" href="https://vila-mojca.com/en/dobrodosli-english/" target="_blank">Book Directly Next Time &nbsp;<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-top:-2px;"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>'
 f'</div>'
 f'<div class="checkout-img">'
 f'{img_tag_sm(checkout, "Key return", "width:100%;height:420px;object-fit:cover;display:block;")}'

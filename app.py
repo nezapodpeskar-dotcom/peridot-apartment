@@ -846,7 +846,7 @@ st.markdown(f"""
     </div>
   </div>
   <div class="pa-hero-right">
-    {img_tag_sm(building, "Villa Mojca", "width:100%;object-fit:cover;display:block;")}
+    <img src="data:image/jpeg;base64,{b64_compressed(building, max_w=1600, quality=92)}" alt="Villa Mojca" style="width:100%;object-fit:cover;display:block;">
     <div class="hero-img-overlay"></div>
   </div>
 </section>

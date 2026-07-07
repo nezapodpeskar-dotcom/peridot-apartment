@@ -1118,7 +1118,7 @@ f'{img_tag_sm(checkout, "Key return", "width:100%;height:420px;object-fit:cover;
 f'</div>'
 f'</div>'
 f'<div style="display:flex;justify-content:center;margin-top:36px;">'
-f'{img_tag_sm(wishing_you, "Wishing you", "width:26%;display:block;")}'
+f'{img_tag(wishing_you, "Wishing you", "width:26%;display:block;")}'
 f'</div>'
 f'</section>',
 unsafe_allow_html=True)

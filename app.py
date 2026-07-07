@@ -58,7 +58,7 @@ garage_plan= ASSETS / "Garage Layout.png"
 key_box_loc= ASSETS / "Location key box.png"
 id_photo   = ASSETS / "ID.png"
 enjoy      = ASSETS / "Enjoy.png"
-wishing_you= ASSETS / "wishing you.png"
+wishing_you= ASSETS / "Thank you.png"
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 st.markdown("""

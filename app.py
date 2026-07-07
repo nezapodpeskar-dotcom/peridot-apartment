@@ -923,7 +923,7 @@ _tl = (
     '<div class="tl-body">'
       '<div class="tl-step">Step 6</div>'
       '<div class="tl-title">Apartment Location</div>'
-      '<div class="tl-desc">From the garage, take the <strong>stairs to the first floor</strong>. It is the <strong>first apartment to the right</strong>.</div>'
+      '<div class="tl-desc">From the garage, take the <strong>stairs to the first floor</strong>. From the main entrance, the apartment is on the <strong>first floor to the right</strong>.</div>'
     '</div>'
   '</div>'
   '<div class="tl-item">'

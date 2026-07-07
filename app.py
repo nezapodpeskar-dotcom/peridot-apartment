@@ -88,6 +88,7 @@ st.markdown("""
 }
 
 body { font-family: 'Inter', sans-serif; color: var(--dark); }
+html { scroll-padding-top: 80px; }
 
 /* ── NAV ── */
 .pa-nav {

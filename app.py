@@ -66,12 +66,16 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── Streamlit resets ── */
-#MainMenu, footer, header { visibility: hidden; }
-.stApp > header { display: none; }
+#MainMenu { display: none !important; }
+header { display: none !important; }
+footer { display: none !important; visibility: hidden !important; height: 0 !important; }
+footer * { display: none !important; }
 [data-testid="stFooter"] { display: none !important; }
 [data-testid="stDecoration"] { display: none !important; }
+[data-testid="stToolbar"] { display: none !important; }
 .viewerBadge_container__r5tak { display: none !important; }
 .stDeployButton { display: none !important; }
+.st-emotion-cache-15ecox0 { display: none !important; }
 .block-container {
     padding: 0 !important;
     max-width: 100% !important;

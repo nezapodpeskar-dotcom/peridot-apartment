@@ -897,7 +897,7 @@ if page == "temperature":
                 (5, "Economy mode"),
                 (6, "Standard ventilation mode"),
                 (7, "Sleep / quiet mode"),
-                (8, "Filter indicator (left and right)"),
+                (8, "Filter indicator"),
               ]
             )}
           </div>

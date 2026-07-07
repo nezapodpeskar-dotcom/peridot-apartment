@@ -171,7 +171,7 @@ html { scroll-padding-top: 80px; }
 .btn-primary {
     display: inline-block;
     background: var(--green);
-    color: #fff;
+    color: #fff !important;
     padding: 14px 30px;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
@@ -179,15 +179,15 @@ html { scroll-padding-top: 80px; }
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: background .2s, transform .15s;
 }
-.btn-primary:hover { background: #0f6e38; color:#fff; transform: translateY(-1px); }
+.btn-primary:hover { background: #0f6e38; color:#fff !important; transform: translateY(-1px); }
 .btn-outline {
     display: inline-block;
     background: transparent;
-    color: var(--green);
-    border: 2px solid var(--green);
+    color: var(--dark) !important;
+    border: 2px solid var(--dark);
     padding: 12px 30px;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
@@ -195,10 +195,10 @@ html { scroll-padding-top: 80px; }
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    text-decoration: none;
-    transition: background .2s, color .2s;
+    text-decoration: none !important;
+    transition: background .2s, color .2s, border-color .2s;
 }
-.btn-outline:hover { background: var(--light); color: var(--green); }
+.btn-outline:hover { background: var(--light); color: var(--dark) !important; }
 .hero-addr {
     font-family: 'Inter', sans-serif;
     font-size: 15px;

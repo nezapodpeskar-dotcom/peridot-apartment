@@ -6,7 +6,7 @@ from PIL import Image
 
 st.set_page_config(
     page_title="Peridot Apartment | Welcome",
-    page_icon="🌿",
+    page_icon=Image.new("RGBA", (1, 1), (0, 0, 0, 0)),
     layout="wide",
     initial_sidebar_state="collapsed",
 )
@@ -75,6 +75,7 @@ key_box_loc= ASSETS / "Location key box.png"
 id_photo   = ASSETS / "ID.png"
 enjoy      = ASSETS / "Enjoy.png"
 wishing_you= ASSETS / "Thank you.png"
+evac_plan  = ASSETS / "Evacuation .png"
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 st.markdown("""
@@ -806,19 +807,63 @@ html { scroll-padding-top: 80px; }
 </style>
 """, unsafe_allow_html=True)
 
+# ── ROUTING ───────────────────────────────────────────────────────────────────
+page = st.query_params.get("page", "home")
+
 # ── NAVIGATION ────────────────────────────────────────────────────────────────
+_active_home = "active" if page == "home" else ""
+_active_evac = "active" if page == "evacuation" else ""
 st.markdown(f"""
 <nav class="pa-nav">
-  <a href="#welcome">{img_tag(logo, "Peridot Apartment", "height:46px;object-fit:contain;")}</a>
+  <a href="?page=home#welcome">{img_tag(logo, "Peridot Apartment", "height:46px;object-fit:contain;")}</a>
   <div class="pa-nav-links">
-    <a href="#welcome" class="active">Welcome</a>
-    <a href="#checkin">Check-in</a>
-    <a href="#checkout">Check-out</a>
-    <a href="#contact">Contact</a>
+    <a href="?page=home#welcome" class="{_active_home}">Welcome</a>
+    <a href="?page=home#checkin">Check-in</a>
+    <a href="?page=home#checkout">Check-out</a>
+    <a href="?page=home#contact">Contact</a>
+    <a href="?page=evacuation" class="{_active_evac}">Evacuation Plan</a>
   </div>
 </nav>
 <div class="nav-spacer"></div>
 """, unsafe_allow_html=True)
+
+# ── EVACUATION PLAN PAGE ──────────────────────────────────────────────────────
+if page == "evacuation":
+    st.markdown(f"""
+    <section class="pa-section" style="padding-bottom:0;">
+      <div class="section-tag">Safety information</div>
+      <div class="section-divider"></div>
+      <div class="section-h2">Evacuation Plan</div>
+    </section>
+    <div class="garage-plan-wrap">
+      <div class="garage-plan-card">
+        <div class="garage-plan-text">
+          <div class="section-tag">Evacuation Plan</div>
+          <h3>Evacuation Plan</h3>
+          <p>The image shows the evacuation routes for the apartment floor. Green markings indicate the escape paths leading to the emergency staircase and exits, while red symbols show fire safety equipment such as extinguishers, alarms, and hydrants. The designated assembly point is marked outside the building.</p>
+        </div>
+        <div class="garage-plan-img">
+          {img_tag_sm(evac_plan, "Evacuation plan", "width:100%;height:auto;object-fit:contain;display:block;padding:16px;background:#f9fbf9;")}
+        </div>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(
+    f'<div class="pa-footer">'
+    f'<div class="footer-left">'
+    f'<p><strong>Need anything during your stay?</strong></p>'
+    f'<p>Contact Saša anytime — we\'re always happy to help.</p>'
+    f'<p><a href="tel:+38631676315">+386 31 676 315</a> &nbsp;·&nbsp; <a href="mailto:sasa.podpeskar@gmail.com">sasa.podpeskar@gmail.com</a></p>'
+    f'</div>'
+    f'<div class="footer-logo">'
+    f'{img_tag(logo, "Peridot Apartment", "height:52px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.88;")}'
+    f'</div>'
+    f'<div class="footer-copy">© Peridot Apartment · Villa Mojca · Borovška cesta 99b, 4280 Kranjska Gora</div>'
+    f'</div>',
+    unsafe_allow_html=True)
+
+    st.stop()
 
 # ── HERO ──────────────────────────────────────────────────────────────────────
 st.markdown(f"""

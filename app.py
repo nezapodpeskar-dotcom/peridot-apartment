@@ -65,7 +65,7 @@ def img_tag_sm(path: Path, alt: str = "", style: str = "") -> str:
 logo       = ASSETS / "cropped-F5A33662-9B21-4B86-BD7E-F1D7F4CC3726.png"
 building   = ASSETS / "Vila Mojca 2.png"
 key_safe   = ASSETS / "key safe.png"
-garage_img = ASSETS / "garage.jpeg"
+garage_img = ASSETS / "garage.png"
 terrace    = ASSETS / "Terasa.jpg"
 checkout   = ASSETS / "checkout.jpg"
 here4u     = ASSETS / "here for you.png"
@@ -970,8 +970,8 @@ _photos = (
     f'<div class="photo-cap">Key safe</div>'
   f'</div>'
   f'<div class="photo-card">'
-    f'{img_tag_sm(garage_img, "Garage", "width:100%;height:190px;object-fit:cover;display:block;")}'
-    f'<div class="photo-cap">Garage interior</div>'
+    f'{img_tag_sm(garage_img, "Garage &amp; Storage room", "width:100%;height:190px;object-fit:cover;display:block;")}'
+    f'<div class="photo-cap">Garage &amp; Storage room</div>'
   f'</div>'
   f'<div class="photo-card">'
     f'{img_tag_sm(terrace, "Terrace", "width:100%;height:190px;object-fit:cover;display:block;")}'

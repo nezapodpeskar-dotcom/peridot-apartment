@@ -832,6 +832,8 @@ st.markdown(f"""
 
 # ── EVACUATION PLAN PAGE ──────────────────────────────────────────────────────
 if page == "evacuation":
+    evac_pdf_path = ASSETS / "Evacuation plan.pdf"
+    evac_pdf_href = f"data:application/pdf;base64,{b64(evac_pdf_path)}"
     st.markdown(f"""
     <section class="pa-section" style="padding-bottom:0;">
       <div class="section-tag">Safety information</div>
@@ -844,6 +846,7 @@ if page == "evacuation":
           <div class="section-tag">Evacuation Plan</div>
           <h3>Evacuation Plan</h3>
           <p>The image shows the evacuation routes for the apartment floor. Green markings indicate the escape paths leading to the emergency staircase and exits, while red symbols show fire safety equipment such as extinguishers, alarms, and hydrants. The designated assembly point is marked outside the building.</p>
+          <a class="btn-primary" href="{evac_pdf_href}" download="Evacuation Plan.pdf" style="width:fit-content;">Download Evacuation Plan (PDF) &nbsp;<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-top:-2px;"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg></a>
         </div>
         <div class="garage-plan-img">
           {img_tag_sm(evac_plan, "Evacuation plan", "width:100%;height:auto;object-fit:contain;display:block;padding:16px;background:#f9fbf9;")}

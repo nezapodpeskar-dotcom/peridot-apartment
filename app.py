@@ -1067,12 +1067,20 @@ st.markdown(f"""
   <div class="garage-plan-card">
     <div class="garage-plan-text">
       <div class="section-tag">Garage layout</div>
-      <h3>Your Parking Space &amp; Storage</h3>
+      <h3>Your Parking Space, Storage &amp; Bicycle Room</h3>
       <div class="garage-badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148A46" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         Parking space number 5 — on the left
       </div>
-      <p>Use the remote control to open the ramp, then the garage door. Storage and bicycle room are also assigned number 5, adjacent to your parking space.</p>
+      <div class="garage-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148A46" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Storage in garage — number 4
+      </div>
+      <div class="garage-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148A46" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Bicycle room before garage entrance — number 5
+      </div>
+      <p>Your dedicated parking space is number 5 — the fourth parking space on the left. Storage room number 4 is located inside the garage area through the door on the left side (as marked on the map). Before the garage entrance, you can also access the bicycle room for storing bicycles or additional equipment.</p>
     </div>
     <div class="garage-plan-img">
       {plan_html}

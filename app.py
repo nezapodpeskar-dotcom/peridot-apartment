@@ -58,6 +58,7 @@ garage_plan= ASSETS / "Garage Layout.png"
 key_box_loc= ASSETS / "Location key box.png"
 id_photo   = ASSETS / "ID.png"
 enjoy      = ASSETS / "Enjoy.png"
+wishing_you= ASSETS / "wishing you.png"
 
 # ── CSS ───────────────────────────────────────────────────────────────────────
 st.markdown("""
@@ -1111,6 +1112,9 @@ f'<div class="cl-item">{_chk_icon}<span>Please <strong>take out all trash</stron
 f'</div>'
 f'<div class="direct-note"><strong>Thank you for staying with us.</strong> For your next stay, feel free to contact us directly for possible special offers and returning guest benefits.</div>'
 f'<a class="btn-primary" href="https://vila-mojca.com/en/dobrodosli-english/" target="_blank">Book Directly Next Time ↗</a>'
+f'<div style="margin-top:28px;">'
+f'{img_tag_sm(wishing_you, "Wishing you", "width:100%;border-radius:14px;display:block;")}'
+f'</div>'
 f'</div>'
 f'<div class="checkout-img">'
 f'{img_tag_sm(checkout, "Key return", "width:100%;height:420px;object-fit:cover;display:block;")}'

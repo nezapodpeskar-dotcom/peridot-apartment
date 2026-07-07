@@ -201,7 +201,7 @@ html { scroll-padding-top: 80px; }
 .btn-outline:hover { background: var(--light); color: var(--dark) !important; }
 .hero-addr {
     font-family: 'Inter', sans-serif;
-    font-size: 17px;
+    font-size: 19px;
     color: var(--muted);
     display: flex;
     align-items: center;
@@ -729,7 +729,7 @@ html { scroll-padding-top: 80px; }
     .hero-text { font-size: 14px; line-height: 1.65; }
     .hero-btns { flex-direction: column; gap: 10px; }
     .btn-primary, .btn-outline { text-align: center; padding: 13px 20px; width: 100%; }
-    .hero-addr { font-size: 12.5px; }
+    .hero-addr { font-size: 14px; justify-content: center; text-align: center; }
     .pa-hero-right { max-height: 220px; border-radius: 12px; }
     .pa-hero-right img { height: 220px; }
     .pa-strip { grid-template-columns: repeat(2, 1fr); }

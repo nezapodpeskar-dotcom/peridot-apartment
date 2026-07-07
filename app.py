@@ -818,7 +818,7 @@ st.markdown(f"""
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
       </svg>
       Borovška cesta 99b, 4280 Kranjska Gora &nbsp;·&nbsp;
-      <a href="https://www.google.com/maps/place/VILA+MOJCA+Kranjska+Gora+-+Peridot+apartment,+Sa%C5%A1a+Podpeskar+s.p./@46.4840309,13.7788626,17z/data=!3m1!4b1!4m6!3m5!1s0x477a7d96a036c899:0xc03b6f12d98b7421!8m2!3d46.4840272!4d13.7814429!16s%2Fg%2F11rgbrfk6w" target="_blank">Open in Google Maps</a>
+      <a href="https://www.google.com/maps/place/VILA+MOJCA+Kranjska+Gora+-+Peridot+apartment,+Sa%C5%A1a+Podpeskar+s.p./@46.4840309,13.7788626,17z/data=!3m1!4b1!4m6!3m5!1s0x477a7d96a036c899:0xc03b6f12d98b7421!8m2!3d46.4840272!4d13.7814429!16s%2Fg%2F11rgbrfk6w" target="_blank">Open in Google Maps &nbsp;<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-top:-2px;"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
     </div>
   </div>
   <div class="pa-hero-right">

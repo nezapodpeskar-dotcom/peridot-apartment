@@ -57,8 +57,8 @@ def img_tag(path: Path, alt: str = "", style: str = "") -> str:
     return f'<img src="data:image/{mime};base64,{b64(path)}" alt="{alt}" style="{style}">'
 
 
-def img_tag_sm(path: Path, alt: str = "", style: str = "") -> str:
-    return f'<img src="data:image/jpeg;base64,{b64_compressed(path)}" alt="{alt}" style="{style}">'
+def img_tag_sm(path: Path, alt: str = "", style: str = "", max_w: int = 800, quality: int = 78) -> str:
+    return f'<img src="data:image/jpeg;base64,{b64_compressed(path, max_w=max_w, quality=quality)}" alt="{alt}" style="{style}">'
 
 
 # ── Load assets ──────────────────────────────────────────────────────────────
@@ -867,14 +867,14 @@ if page == "temperature":
           <p>The apartment blinds can be lowered during the day to reduce direct sunlight and prevent the apartment from overheating. Keeping the blinds closed, especially on sunny windows, will help maintain a cooler indoor temperature.</p>
         </div>
         <div class="garage-plan-img">
-          {img_tag_sm(blinds_img, "Blinds", "width:100%;height:320px;object-fit:cover;display:block;")}
+          {img_tag_sm(blinds_img, "Blinds", "width:100%;height:220px;object-fit:contain;display:block;padding:16px;background:#f9fbf9;", max_w=1200, quality=95)}
         </div>
       </div>
     </div>
     <div class="garage-plan-wrap">
       <div class="garage-plan-card">
         <div class="garage-plan-img">
-          {img_tag_sm(air_recup_img, "Air recuperation system", "width:100%;height:320px;object-fit:cover;display:block;")}
+          {img_tag_sm(air_recup_img, "Air recuperation system", "width:100%;height:220px;object-fit:contain;display:block;padding:16px;background:#f9fbf9;", max_w=1200, quality=95)}
         </div>
         <div class="garage-plan-text">
           <div class="section-tag">Air Recuperation System</div>

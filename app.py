@@ -520,6 +520,7 @@ html { scroll-padding-top: 80px; }
     color: rgba(255,255,255,0.88);
     line-height: 1.7;
     margin: 0;
+    text-align: justify;
 }
 
 /* ── INFO BLOCK ── */

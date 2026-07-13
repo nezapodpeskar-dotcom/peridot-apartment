@@ -799,6 +799,8 @@ html { scroll-padding-top: 80px; }
     .pa-footer { padding: 36px 16px; gap: 20px; }
     .footer-left p { font-size: 14px; }
     .footer-logo img { height: 40px; }
+    .num-value { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+    .num-value .num-sep { display: none; }
 }
 
 /* ── SMALL PHONE (≤380px) ── */
@@ -865,16 +867,17 @@ if page == "evacuation":
     ]
 
     def _number_row(label, value, is_last=False):
-        tel_links = " or ".join(
+        numbers = value.split(" or ")
+        tel_links = '<span class="num-sep"> or </span>'.join(
             f'<a href="tel:{n.replace(" ", "")}" style="color:var(--green);text-decoration:none;">{n}</a>'
-            for n in value.split(" or ")
+            for n in numbers
         )
         border = "" if is_last else "border-bottom:1px solid var(--border);"
         return (
             f'<div style="display:flex;align-items:center;justify-content:space-between;'
             f'padding:18px 0;{border}">'
             f'<span style="font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:var(--dark);">{label}</span>'
-            f'<span style="font-family:Inter,sans-serif;font-size:15px;font-weight:700;color:var(--green);">{tel_links}</span>'
+            f'<span class="num-value" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700;color:var(--green);">{tel_links}</span>'
             f'</div>'
         )
 

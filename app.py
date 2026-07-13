@@ -1085,7 +1085,7 @@ _important = (
     f'<div style="display:flex;gap:16px;align-items:center;margin-top:4px;">'
       f'<div style="flex:1;">'
         f'<h4>Guest Registration Required</h4>'
-        f'<p>Slovenian law requires all accommodation providers to register guests before or shortly after arrival. Please provide the required registration details (<strong style="color:#fff;">full name, date of birth, nationality, permanent address, and ID/passport number</strong>) for all guests before your arrival, or present your ID/passport upon arrival so we can verify the information and complete the registration. For your privacy and security, your personal data will only be used for the mandatory guest registration and will not be used for any other purpose.</p>'
+        f'<p>Slovenian law requires all accommodation providers to register guests before or shortly after arrival. Please provide the required registration details (<strong style="color:#fff;">full name, date of birth, nationality, permanent address, and ID/passport number</strong>) for all guests before your arrival, or present your ID/passport upon arrival so we can verify the information and complete the registration. For your privacy and security, your personal data will only be used for the mandatory guest registration and will not be used for any other purpose. Please note that the tourist tax is not included in the accommodation price and is payable separately, and should be settled before check-out.</p>'
       f'</div>'
       f'<div style="flex-shrink:0;">'
         f'{img_tag_sm(id_photo, "ID document", "width:110px;height:80px;object-fit:cover;border-radius:10px;opacity:0.92;")}'

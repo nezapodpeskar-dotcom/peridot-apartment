@@ -798,6 +798,7 @@ html { scroll-padding-top: 80px; }
     .direct-note { font-size: 13.5px; padding: 18px 18px; }
     .pa-footer { padding: 36px 16px; gap: 20px; }
     .footer-left p { font-size: 14px; }
+    .footer-logo { justify-content: center; }
     .footer-logo img { height: 40px; }
     .num-value { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
     .num-value .num-sep { display: none; }
@@ -844,7 +845,7 @@ def _render_routed_footer():
     f'<div class="pa-footer">'
     f'<div class="footer-left">'
     f'<p><strong>Need anything during your stay?</strong></p>'
-    f'<p>Contact Saša anytime — we\'re always happy to help.</p>'
+    f'<p>Contact us anytime, we\'re always happy to help.</p>'
     f'<p><a href="tel:+38631676315">+386 31 676 315</a> &nbsp;·&nbsp; <a href="mailto:sasa.podpeskar@gmail.com">sasa.podpeskar@gmail.com</a></p>'
     f'</div>'
     f'<div class="footer-logo">'
@@ -1311,7 +1312,7 @@ st.markdown(
 f'<div class="pa-footer">'
 f'<div class="footer-left">'
 f'<p><strong>Need anything during your stay?</strong></p>'
-f'<p>Contact Saša anytime — we\'re always happy to help.</p>'
+f'<p>Contact us anytime, we\'re always happy to help.</p>'
 f'<p><a href="tel:+38631676315">+386 31 676 315</a> &nbsp;·&nbsp; <a href="mailto:sasa.podpeskar@gmail.com">sasa.podpeskar@gmail.com</a></p>'
 f'</div>'
 f'<div class="footer-logo">'
